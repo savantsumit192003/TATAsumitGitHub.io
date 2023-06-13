@@ -1,36 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | 3-column preview card component</title>
+    <style> 
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    *{ 
+
+        margin:0px;
+        padding:0px;
+    
+    }
+
+    .main{ 
+
+        width:70vw;
+        margin:15%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr  ;
+        grid-template-rows: 1fr ;
+    
+    }
+
+    .child:nth-child(1){ 
+
+        display: grid;
+        background-color:orange;
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr ;
+        border-radius: 10px 0px 0px 10px;
+
+    
+    }
+
+    .logo:nth-child(1){ 
+
+        grid-column: 2/3;
+        grid-row: 2/3;
+
+    }
+
+    .sedans:nth-child(2){ 
+
+        grid-column: 2/3;
+        grid-row: 4/5;
+        color: white;
+        font-size: 100%;
+        
+    }
+
+    .content:nth-child(3){ 
+
+        grid-column:2/3;
+        grid-row: 5/6;
+        color: white;
+    }
+
+    .button:nth-child(4){ 
+
+        grid-column:2/3;
+        grid-row: -2/-3;
+        border-radius: 20px;
+        width: 70%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .learnmore:nth-child(1){ 
+
+        color: orange;
+        justify-self: center;
+    
+    }
+
+    .secondchild:nth-child(2){ 
+
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr ;
+        background-color: #016972;
+
+    }
+
+    .logosuvs:nth-child(1){ 
+
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .suvs:nth-child(2){ 
+
+        grid-column: 2/3;
+        grid-row:4/5;
+        color: white;
+    }
+
+    .contents:nth-child(3){ 
+
+        grid-column: 2/3;
+        grid-row: 5/6;
+        color: white;
+    }
+
+    .buttons:nth-child(4){ 
+
+        grid-column: 2/3;
+        grid-row: 7/-2;
+        width: 70%;
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         
+    }
+    
+    .learnnmore:nth-child(1){ 
+
+        color:#016972;
+
+
+
+    }
+
+    .thirdchild:nth-child(3){ 
+        
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr ;
+        background-color:#00403f;
+        border-radius: 0px 10px 10px 0px;
+
+    }
+
+    .logoluxury:nth-child(1){ 
+
+        grid-column:2/3;
+        grid-row:2/3;
+    }
+
+    .luxury:nth-child(2){ 
+
+        grid-column:2/3;
+        grid-row: 4/5;
+        color:white
+    }
+    
+    .learnsmore:nth-child(1){ 
+
+        color:#00403f;
+    
+    }
+
+    @media(max-width:425px){ 
+
+        .main{ 
+           
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;   
+            border-radius: 0px 0px 0px 0px;
+            
+        }
+        
+        .child:nth-child(1){ 
+
+        border-radius: 10px 10px 0px 0px ;
+        }
+
+        .thirdchild:nth-child(3){ 
+
+            border-radius: 0px 0px 10px 10px ;
+        }
+    }
+
+    
+    
+    </style>
 </head>
 <body>
-  
-  Sedans
-  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-  or on your next road trip.
 
-  SUVs
-  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-  and off-road adventures.
+    <div class="main"> 
+        <div class="child">
+            <img class="logo"
+            src="images/icon-sedans.svg"> 
+            <div class="sedans"><h3> SEDANS </h3></div>
+            <div class="content"> Choose sedans for its affordability and excellent fuel ecomomy.Ideal for cruising in the city or on your next road trip.</div>
+            <div class="button">
+                <div class="learnmore"> Learn More</div>
+            </div>
+        </div>
 
-  Luxury
-  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-  rental and arrive in style.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="secondchild">
+            <img class="logosuvs"
+            src="images/icon-suvs.svg"> 
+            <div class="suvs"><h3> SUVS </h3></div>
+            <div class="contents"> Take SUV for spacious interior, power, and verstility. Perfectfor your next family vacation and off-road adventures. </div>
+            <div class="buttons">
+                <div class="learnnmore"> Learn More </div>
+            </div>
+        </div>
+
+        <div class="thirdchild">
+            <img class="logoluxury"
+            src="images/icon-luxury.svg"> 
+            <div class="luxury"><h3> LUXURY </h3></div>
+            <div class="contents"> cruise  in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</div>
+            <div class="button">
+                <div class="learnsmore"> Learn More </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
